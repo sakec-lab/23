@@ -1,0 +1,109 @@
+
+### Step-by-Step Git Commands:
+
+1. **Initialize a new Git repository:**
+   ```bash
+   git init
+   ```
+   This creates a new Git repository in your current directory.
+
+2. **Create the `calculator.sh` file with basic content:**
+   ```bash
+   echo "#!/bin/bash" > calculator.sh
+   echo "echo \"Welcome to the simple calculator\"" >> calculator.sh
+   echo "echo \"The result of 1 + 3 is: \$((1+3))\"" >> calculator.sh
+   ```
+   This creates a new file `calculator.sh` with a simple shell script to output a welcome message and perform basic addition.
+
+3. **List files in the directory (to verify that `calculator.sh` was created):**
+   ```bash
+   ls -ltra
+   ```
+   This command lists all files in the current directory along with details like permissions, size, and last modification date.
+
+4. **Check the current Git status (you'll see `calculator.sh` as untracked):**
+   ```bash
+   git status
+   ```
+   This shows the current status of the working directory, including untracked files like `calculator.sh`.
+
+5. **Add `calculator.sh` to the Git staging area:**
+   ```bash
+   git add calculator.sh
+   ```
+   This stages the `calculator.sh` file, marking it for inclusion in the next commit.
+
+6. **Check Git status again to confirm that `calculator.sh` is staged:**
+   ```bash
+   git status
+   ```
+   This confirms that `calculator.sh` is now in the staging area, ready to be committed.
+
+7. **Commit the staged file with a message:**
+   ```bash
+   git commit -m "Add simple calculator script"
+   ```
+   This commits the staged changes, saving the `calculator.sh` file in the repository with a descriptive commit message.
+
+8. **Append text ("dhruvesh") to `calculator.sh`:**
+   ```bash
+   echo "echo dhruvesh" >> calculator.sh
+   ```
+   This appends a line of text to the end of `calculator.sh`.
+
+9. **Check the differences between the working directory and the last commit:**
+   ```bash
+   git diff
+   ```
+   This shows the differences between the current state of `calculator.sh` and the last committed version.
+
+10. **Add the modified `calculator.sh` to the Git staging area:**
+   ```bash
+   git add calculator.sh
+   ```
+   This stages the modified version of `calculator.sh` for the next commit.
+
+11. **Commit the changes with another commit message:**
+   ```bash
+   git commit -m "Append name to calculator.sh"
+   ```
+   This commits the modifications with a descriptive message.
+
+12. **Create a new file called `git_status.txt` with some content:**
+   ```bash
+   echo "This is a git status file" > git_status.txt
+   ```
+   This creates a new file `git_status.txt` with the content "This is a git status file."
+
+13. **Add the new file to the Git staging area:**
+   ```bash
+   git add git_status.txt
+   ```
+   This stages the new file `git_status.txt`.
+
+14. **Check the Git status to verify both files are staged:**
+   ```bash
+   git status
+   ```
+   This confirms that both `calculator.sh` (modified) and `git_status.txt` (new) are staged for commit.
+
+15. **Commit the new file with a message:**
+   ```bash
+   git commit -m "Add git_status.txt file"
+   ```
+   This commits the new file `git_status.txt` with an appropriate commit message.
+
+16. **Check the Git log to see your commit history:**
+   ```bash
+   git log --oneline
+   ```
+   This shows a brief summary of your commit history, with each commit on a single line.
+
+17. **Perform a final check of the Git status to ensure the working directory is clean:**
+   ```bash
+   git status
+   ```
+   This verifies that there are no untracked or modified files left to be staged, meaning your working directory is clean.
+
+---
+
